@@ -1,0 +1,135 @@
+
+.foot {
+    background-color: #eef8ff;
+}
+.foot_inside {
+    width: 100%;
+    position: absolute;
+    
+    color: #fff;
+    background-color: #000;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 100px 0 30px;
+}
+.foot_row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.foot_col {
+    flex-basis: 20%;
+    padding: 10px;
+}
+.foot_col:nth-child(2),.foot_col:nth-child(3){
+    flex-basis: 15%;
+}
+.foot_col-img {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 30px;
+}
+.col_title {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.col_title-email {
+    width: fit-content;
+    border-bottom: 1px solid#65bf29;
+    margin: 20px 0;
+}
+.foot_col-list {
+    list-style: none;
+    margin-bottom: 12px;
+}
+.foot_col-list a {
+    text-decoration: none;
+    color: #fff;
+}
+.foot_col-list a:hover{
+    color: #65bf29;
+}
+.foot_form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 50px;
+    transition: transform 0.5s , border-bottom 0.5s, color 0.5s;
+}
+.foot_form:focus-within {
+    transform: translateY(-10px);
+    border-bottom: 1px solid #65bf29;
+    color: #65bf29;
+}
+.foot_form .fa-regular {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.foot_form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+    height: 30px;
+}
+.foot_form input:focus-within{
+    color: #65bf29;
+}
+.foot_form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.foot_form button .fa-solid {
+    font-size: 16px;
+    color: #ccc;
+}
+.foot_social-icon .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: white;
+    color: #000;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+.foot_social-icon .fa-brands:hover{
+    background-color: #65bf29;
+    color: #fff;
+    transform: translateY(-10px)
+}
+.break_line {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #65bf29;
+    margin: 20px auto;
+}
+.foot_below {
+    text-align: center;
+    text-wrap: wrap;
+}
+@media (max-width: 700px){
+    .foot{
+        bottom: unset;
+    }
+    .foot_col {
+        flex-basis: 100%;
+    }
+    .foot_col:nth-child(2),.foot_col:nth-child(3){
+        flex-basis: 100%;
+    }
+}

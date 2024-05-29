@@ -1,0 +1,520 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+ 
+/* header */
+#slide {
+  min-height: 960px;
+  background: url('background_kawasaki.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+#slide .header {
+  height: 80px;
+  position:fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  padding: 0 36px;
+  background: rgba(99, 106, 60, 0.1);
+  backdrop-filter: blur(50px) ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  
+
+}
+
+
+
+.logo {
+  font-size: 28px;
+  color: #66cc33;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a {
+  font-size: 16px;
+  color:rgb(251, 252, 255);
+  text-decoration: none;
+  font-weight: 500px ;
+  margin-left: 40px;
+}
+
+.icons {
+  position: absolute;
+  right: 36px;
+  font-size: 32px;
+  color: #66cc33;
+  cursor: pointer;
+  display: none;
+
+}
+/* Picture under header */
+.picture{
+  
+  width: 100%;
+  height: 960px;
+  
+}
+/* Responsive */
+@media (max-width:850px) {
+  .header {
+      padding: 0 18px;
+  }
+}
+@media (max-width:768px) {
+  .icons {
+      display: inline-flex;
+  }
+  .nav {
+      border-top: 2px solid #66cc33;
+      position:absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      height: 32px;
+      background: #000;
+      backdrop-filter: blur(50px);
+      text-align: center;
+      box-sizing: content-box;
+  }
+  .nav a{
+      line-height: 32px;
+      font-size: 18px;
+      margin: 1,5rem 0;
+      text-align: center;
+      padding: 3px 5px;
+  }
+  .nav a:hover{
+      color: #66cc33;
+  }
+
+}
+#button {
+  height: calc(100vh+60px );
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(251, 252, 255);
+  position: absolute;
+  top: 90%;
+  width: 33%;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgba(99, 106, 60, 0.1);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgb(251, 252, 255);
+  right: 33%;
+  left:33%;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  
+}
+#button:hover {
+  border: 2px solid #66cc33;
+  color: #66cc33;
+}
+
+#button h1 {
+  color:rgb(251, 252, 255);
+  font-size: 40px;
+  text-align: center;
+  line-height: 100px;
+  
+  
+}
+
+/* News */
+.sec_news {
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+.sec_container {
+  width: 100%;
+  position: relative;
+  top: 130%;
+  color: #fff;
+  background-color: #0a0a0b;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 30px 0;
+}
+.sec_news-head{
+  text-align: left;
+  padding-left: 50px;
+}
+.break_line {
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid #65bf29;
+  margin: 0px auto;
+}
+.sec_news-title{
+  font-size: 35px;
+  margin-left: 85px;
+  margin-bottom: 5px;
+}
+.sec_news-mid{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 120px;
+  flex-wrap: wrap;
+  margin: 120px 70px 0;
+}
+.sec_option{
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+.sec_option-image{
+  border-bottom: 3px solid #65bf29;
+}
+.sec_option-promote {
+  padding: 20px 20px 20px 20px;
+}
+.sec_option-title{
+  color: #000;
+  margin-bottom: 10px;
+
+}
+.sec_option-content{
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* carStyle */
+
+/* CSS carStyle */
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --first-color: #66cc33;
+  --button-color: #66cc33;
+  --button-color-alt: hsl(0, 0%, 21%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: #fff;
+  --text-color-light: #fff;
+  --body-color: hsl(219, 4%, 4%);
+  --container-color: hsl(219,4%,7%);
+  --border-color: hsl(0, 0%, 94%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Roboto', sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-bold: 700;
+
+  /*========== Margenes Bottom ==========*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  margin: 0;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  /*For animation dark mode*/
+  transition: .4s;
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/*=============== THEME ===============*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 100%;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 6.5rem 0 1rem;
+}
+
+.section__title {
+  position: relative;
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.section__title::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 67px;
+  height: 1px;
+  background-color: var(--first-color);
+}
+/*=============== BUTTONS ===============*/
+/* .button {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: #FFF;
+    padding: 1.25rem 2rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+  }
+  
+  .button:hover {
+    background-color: var(--button-color-alt);
+  }
+  
+  .button--gray {
+    background-color: hsl(0, 0%, 75%);
+    color: var(--title-color);
+  }
+  
+  .button--gray:hover {
+    background-color: hsl(0, 0%, 63%);
+  }
+  
+  .button--small {
+    padding: 1rem 1.5rem;
+  } */
+  /*=============== CARSTYLE ===============*/
+  .carStyle__container {
+    padding-top: 10px;
+    width: 100%;
+  }
+  .carStyle__fitler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 35px;
+  }
+  .carStyle__item {
+    width: 48px;
+    height: 48px;
+    border: none;
+    outline: none;
+    padding: 7.5px;
+    border-radius: 7.5px;
+    background-color: var(--container-color);
+    color: white;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .carStyle__item span{
+    opacity: 0.3;
+    transition: 0.3s;
+  }
+  .carStyle__item:hover {
+    background-color: var(--first-color);
+  }
+  .carStyle__item:hover span {
+    opacity: 1;
+  }
+  .carStyle__content {
+    grid-template-columns: 228px 228px 228px 228px;
+    row-gap: 25px;
+    column-gap: 50px;
+    justify-content: center;
+    
+  }
+  .carStyle__card{
+    position: relative;
+    background-color: var(--container-color);
+    padding: 20px 15px 15px;
+    border-radius: 10px;
+  }
+  .carStyle__card .shape__smaller{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+  }
+  .carStyle__title,
+  .carStyle__sub,
+  .carStyle__img {
+    position: relative;
+  }
+  .carStyle__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 2.5px;
+    margin-top: 0;
+  }
+  .carStyle__sub {
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    font-weight: 400px;
+  }
+  .carStyle__img {
+    width: 180px;
+    margin: 15px 0;
+    transition: 0.3s;
+  }
+  .carStyle__price {
+    font-size: var(--h3-font-size);
+    margin-bottom: 40px;
+  }
+  .carStyle__button {
+        border: none;
+        outline: none;
+        padding: 7.5px 10px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px 0 10px 0;
+        cursor: pointer;
+        transition: 0.3s;
+  }
+  .carStyle__button i{
+    font-size: 12.5px;
+  }
+  .carStyle__button:hover {
+    background-color: #66cc33;
+    color: #fff;
+  }
+  .carStyle__card:hover .carStyle__img {
+    transform: translateX(-3px);
+  }
+  .section__below {
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .section__below-container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--container-color);
+    width: 120px;
+    margin: 20px auto;
+    height: 40px;
+    border-radius: 10px;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .section__below-but {
+    transition: 0.3s;
+  }
+  .section__below-container:hover {
+    animation: slide 0.4s;
+    background-color: #66cc33;
+    opacity: 1;
+  }
+  .section__below-container:hover .section__below-but {
+    background-color: #66cc33;
+  }
+  .section__below-but {
+    background-color: var(--container-color);
+    display: flex;
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 40px;
+    align-items: center;
+  }
+  .icon__below {
+    margin-left: 3px;
+  }
+  @keyframes slide{
+    from{
+      width: 0;
+    }
+    to{
+      width: 120px;
+    }
+  }
