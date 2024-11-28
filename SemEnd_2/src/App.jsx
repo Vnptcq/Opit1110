@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import './App.scss'
-import './assets/bootstrap/css/bootstrap.min.css'
-import './assets/fonts/font-awesome.min.css'
-import './assets/fonts/themify-icons.css'
-import './assets/owlcarousel/css/owl.carousel.css'
-import './assets/owlcarousel/css/owl.theme.css'
-import './assets/css/slicknav.css'
-import './assets/css/magnific-popup.css'
-import './assets/css/animate.css'
-import './assets/css/style.css'
-import Header from './components/Header'
 
+import './components/todo/todo.css'
+
+import TodoNew from './components/todo/TodoNew'
+import TodoData from './components/todo/TodoData'
 function App() {
+  const name = "VuDinhQuy";
+  const age = 21;
   return (
-    <>
-      <Header />
-    </>
+    <div className="todo-container" >
+      <div className="todo-title">Todo List</div>
+    
+      <TodoNew
+      name ={name}
+      age = {age}/>
+      <TodoData/>
+      </div>
   )
 }
 
